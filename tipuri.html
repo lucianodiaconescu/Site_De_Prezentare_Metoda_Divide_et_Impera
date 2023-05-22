@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+<title>Metoda Divide et Impera</title>
+<link href="css/a.css" rel="stylesheet" type="text/css" />
+</head>
+<body background="3.jpg" background-size:100% onload="MM_preloadImages('imagini/d_2.png','imagini/s_2.png')">
+<div class="info" id="info">
+  <h1>Tipuri de probleme & rezolvari</h1>
+  <p><img src="7.jpg" width="306" height="180">Suma elementelor dintr-un vector<br><br>Fie un vector V cu n elemente întregi, indexate de la 1 la n. Să se determine suma lor.<br><br>Problema este binecunoscută. Cum o rezolvăm prin metoda Divide et Impera? Care sunt subproblemele?
+
+    A împărți problema în subprobleme constă de fapt în a împărți vectorul în doi subvectori, cu număr (aproape) egal de elemente. Primul subvector ar fi V cu elementele indexate de la 1 la n/2 (prima jumătate a lui V), iar al doilea ar fi a doua jumătate – elementele indexate de la n/2+1 la n.
+    
+    Prima jumătate este un vector, dar a jumătate nu mai este un vector, elementele nu mai sunt indexate de la 1 la ..., deci cele două subprobleme nu mai sunt de același tip (sau cel puțin nu în mod direct).
+    
+
+  <br><br>Rezolvare:<br><br>
+  int Suma(int V[], int st, int dr)<br>
+{<br>
+    if(st == dr)<br>
+        return V[st]; // problemă elementară<br>
+    else<br>
+    {<br>
+        int m = (st + dr) / 2; // împărțim problema în subprobleme<br>
+        int s1 = Suma(V, st, m); // rezolvăm prima subproblemă<br>
+        int s2 = Suma(V, m + 1, dr); // rezolvăm a doua subproblemă<br>
+        return s1 + s2; // combinăm rezultatele<br>
+    }<br>
+}<br>
+int main()<br>
+{<br>
+    int V[101], n;<br>
+    //citire n si V<br>
+    cout << Suma(V,1,n);<br>
+    return 0;<br>
+}
+  </div>
+  <div class="meniu" id="meniu">
+    <div class="butoane" id="butoane">
+      <div class="butoane_1" id="butoane_1">
+        <div class="buton" id="buton"><a href="index-2.html">Home</a></div>
+        <div class="buton" id="buton"><a href="introducere.html">Introducere</a></div>
+        <div class="buton" id="buton"><a href="tehnica.html">Tehnica</a></div>
+        <div class="buton" id="buton"><a href="observatii.html">Observatii Metoda Divide et Impera</a></div>
+        <div class="buton" id="buton"><a href="tipuri.html">Tipuri de probleme & rezolvari</a></div>
+       <div class="buton" id="buton"><a href="contact.html">Contact</a></div>
+      </div>
+      <div class="buton" id="buton2"></div>
+    </div>
+  </div>
+  </body>
+  
+  </html>
+  

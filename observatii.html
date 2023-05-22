@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Metoda Divide et Impera</title>
+<link href="css/a.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+#info p a {
+	color: #CCC;
+	text-decoration: none;
+}
+</style>
+</head>
+<body background="6.png" background-size:100% onload="MM_preloadImages('imagini/d_2.png','imagini/s_2.png')">
+<div class="info" id="info">
+  <h1>Etapele Metodei Divide et Impera</h1>
+  <p><img src="8.jpg" width="306" height="230">
+    Dupa cum sugereaza si numele 'desparte si stapaneste 'etapele rezolvarii unei probleme (numita problema initiala) in DIVIDE ET IMPERA sunt:
+  - descompunerea problemei initiale in subprobleme independente similare problemei de baza ,de dimensiuni mai mici;
+  - descompunerea treptata a subproblemelor in alte subprobleme din ce in ce mai simple ,pana cand se pot rezolva imediata prin algoritmul simplificat;
+  - rezolvarea subproblemelor simple;
+  - combinarea solutiilor gasite pentru construirea solutiilor subproblemelor de dimensiuni din ce in ce mai mari;
+  - combinarea ultimelor solutii determina obtinerea solutiei problemei initiale.
+  Metoda DIVIDE ET IMPERA admite o implementare recursiva,deoarece subproblemele sunt similare problemei initiale, dar de dimensiuni mai mici.<br><br> Principiul fundamental al recursivitatii este autoapelarea unui subprogram cand acesta este activ, ceea ce se intampla la un nivel, se intampla la orice nivel, avand grija sa asiguram conditia de terminare ale apelurilor repetate. Asemanator se intampla si in cazul metodei DIVITE ET IMPERA, la un anumit nivel sunt doua posibilitati:<br><br>
+  - s-a ajuns la o (sub)problema simpla ce admite o rezolvare imediata caz in care se rezolva (sub)problema si se revine din apel (la subproblema anterioara,de dimensiuni mai mari);<br><br>
+  - s-a ajuns la o (sub)problema care nu admite o rezolvare imediata, caz in care o descompunem in doua sau mai multe subprobleme si pentru fiecare din ele se continua apelurile recursive (ale procedurii sau functiei).
+  <p>In etapa finala a metodei DIVIDE ET IMPERA se produce combinarea subproblemelor (rezolvate deja) prin secventele de revenire din apelurile recursive.
+</div>
+<div class="meniu" id="meniu">
+  <div class="butoane" id="butoane">
+    <div class="butoane_1" id="butoane_1">
+      <div class="buton" id="buton"><a href="index-2.html">Home</a></div>
+      <div class="buton" id="buton"><a href="introducere.html">Introducere</a></div>
+      <div class="buton" id="buton"><a href="tehnica.html">Tehnica</a></div>
+      <div class="buton" id="buton"><a href="observatii.html">Observatii Metoda Divide et Impera</a></div>
+      <div class="buton" id="buton"><a href="tipuri.html">Tipuri de probleme & rezolvari</a></div>
+     <div class="buton" id="buton"><a href="contact.html">Contact</a></div>
+    </div>
+    <div class="buton" id="buton2"></div>
+  </div>
+</div>
+</body>
+
+</html>
